@@ -1,0 +1,8 @@
+Collecting plotly
+  Downloading plotly-6.5.1-py3-none-any.whl.metadata (8.5 kB)
+Requirement already satisfied: narwhals>=1.15.1 in ./.conda/lib/python3.10/site-packages (from plotly) (2.14.0)
+Requirement already satisfied: packaging in /home/chantelle/.local/lib/python3.10/site-packages (from plotly) (25.0)
+Downloading plotly-6.5.1-py3-none-any.whl (9.9 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/9.9 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/9.9 MB[0m [31m8.9 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.7/9.9 MB[0m [31m9.6 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━[0m [32m5.5/9.9 MB[0m [31m9.6 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━[0m [32m7.3/9.9 MB[0m [31m9.3 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━[0m [32m9.2/9.9 MB[0m [31m9.3 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.9/9.9 MB[0m [31m9.1 MB/s[0m  [33m0:00:01[0m
+[?25hInstalling collected packages: plotly
+Successfully installed plotly-6.5.1

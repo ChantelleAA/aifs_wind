@@ -1,0 +1,11 @@
+anemoi
+anemoi-inference
+anemoi-datasets
+anemoi-models
+requests
+plotly==3.10.0
+cdsapi
+xarray
+netcdf4
+huggingface-hub
+anemoi.graphs==0.3.0
