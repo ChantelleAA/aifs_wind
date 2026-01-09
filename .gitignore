@@ -1,0 +1,4 @@
+*.grib
+*.grib2
+*.idx
+*.nc
