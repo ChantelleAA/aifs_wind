@@ -1,0 +1,44 @@
+"stations": {
+    {
+        "name": "Dublin",
+        "station_location": "Pheonix Park",
+        "latitude": 53.3589378,
+        "longitude": -6.330710473854637
+    },
+    {
+        "name": "Shannon",
+        "station_location": "Shannon Airport",
+        "latitude": 52.6986845,
+        "longitude": -8.921554762550244
+    },
+    {
+        "name": "Cork",
+        "station_location": "Cork Airport",
+        "latitude": 51.84173815,
+        "longitude": -8.493798524458427
+    },
+    {
+        "name": "Galway",
+        "station_location": "Mace Head",
+        "latitude": 53.3252684,
+        "longitude": -9.9067479
+    },
+    {
+        "name": "Valentia",
+        "station_location": "Valentia Observatory",
+        "latitude": 51.940110450000006,
+        "longitude": -10.244100575764996
+    },
+    {
+        "name": "Malin Head",
+        "station_location": "Malin Head Weather Station",
+        "latitude": 55.3747865,
+        "longitude": -7.3998451
+    },
+    {
+        "name": "Sherkin Island",
+        "station_location": "Sherkin Island Weather Station",
+        "latitude": 51.4715854,
+        "longitude": -9.41753349584879
+    }
+}
