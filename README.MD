@@ -13,7 +13,7 @@ This project evaluates how AI-based weather forecasts (AIFS) compare to traditio
 - **AIFS Ensemble provides the most reliable forecasts**, combining accuracy with uncertainty quantification
 - **Lead time degradation is minimal** for AIFS up to 24 hours, suggesting good temporal stability
 
-![Environmental Comparison](images/environmental_comparison.png)
+![Environmental Comparison](environmental_comparison.png)
 *Figure 1: Model performance comparison across different Irish environments by lead time*
 
 ## 📍 Study Locations
@@ -24,7 +24,7 @@ The analysis includes **11 observation locations** strategically selected across
 - **4 Coastal** stations (Met Éireann synop)
 - **5 Offshore** buoys (Marine Institute)
 
-![Station Locations](images/irish_stations_map.png)
+![Station Locations](irish_stations_map.png)
 *Figure 2: Geographic distribution of observation stations and buoys across Ireland*
 
 ### Location Details
@@ -69,7 +69,7 @@ Testing across multiple environments reveals model performance under:
 
 ### Performance by Environment
 
-![Wind Speed Distributions](images/wind_speed_distributions.png)
+![Wind Speed Distributions](wind_speed_distributions.png)
 *Figure 3: Wind speed distributions by environment showing model performance against observations*
 
 #### Onshore Performance
@@ -91,7 +91,7 @@ Testing across multiple environments reveals model performance under:
 
 ### Detailed Forecast vs Observations
 
-![Forecast vs Observations - Key Examples](images/forecast_vs_obs_key_examples.png)
+![Forecast vs Observations - Key Examples](forecast_vs_obs_key_examples.png)
 *Figure 4: Detailed comparison showing representative onshore, coastal, and offshore locations with statistics*
 
 **Key observations from representative locations:**
@@ -116,7 +116,7 @@ Testing across multiple environments reveals model performance under:
 
 ### Comprehensive Location Analysis
 
-![All Locations Comparison](images/forecast_vs_obs_all_locations.png)
+![All Locations Comparison](forecast_vs_obs_all_locations.png)
 *Figure 5: Complete 11-location comparison showing forecast evolution across lead times*
 
 This comprehensive view reveals:
@@ -126,7 +126,7 @@ This comprehensive view reveals:
 
 ### Bias Analysis
 
-![Model Bias by Location](images/model_bias_by_location.png)
+![Model Bias by Location](model_bias_by_location.png)
 *Figure 6: Model bias (AIFS - IFS) showing where AIFS outperforms IFS*
 
 **Key observations:**
@@ -137,7 +137,7 @@ This comprehensive view reveals:
 
 ### Model Difference Analysis
 
-![Model Difference at 12h](images/model_difference_by_location.png)
+![Model Difference at 12h](model_difference_by_location.png)
 *Figure 7: Direct model difference (AIFS - IFS) at 12-hour forecast lead time*
 
 This plot quantifies the improvement magnitude:
@@ -147,7 +147,7 @@ This plot quantifies the improvement magnitude:
 
 ### Ensemble Uncertainty Analysis
 
-![Ensemble Spread vs Error](images/ensemble_spread_error.png)
+![Ensemble Spread vs Error](ensemble_spread_error.png)
 *Figure 8: AIFS ensemble spread compared to mean absolute error by environment*
 
 **Interpretation:**
@@ -158,7 +158,7 @@ This plot quantifies the improvement magnitude:
 
 ### Lead Time Performance
 
-![Wind Speed by Lead Time](images/wind_speed_by_leadtime.png)
+![Wind Speed by Lead Time](wind_speed_by_leadtime.png)
 *Figure 9: Mean wind speed evolution across forecast lead times*
 
 **Findings:**
@@ -248,7 +248,7 @@ aifs_wind/
 │   ├── metrics_by_location.csv       # Per-location stats
 │   └── metrics_by_environment.csv    # Environment aggregates
 │
-├── images/                            # Generated figures
+├──                             # Generated figures
 │   ├── irish_stations_map.png
 │   ├── forecast_vs_obs_key_examples.png
 │   ├── forecast_vs_obs_all_locations.png
