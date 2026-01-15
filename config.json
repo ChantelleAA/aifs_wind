@@ -1,44 +1,119 @@
-"stations": {
-    {
-        "name": "Dublin",
-        "station_location": "Pheonix Park",
-        "latitude": 53.3589378,
-        "longitude": -6.330710473854637
+{
+    "stations": {
+        "onshore": [
+            {
+                "name": "Dublin",
+                "location": "Phoenix Park",
+                "type": "onshore",
+                "latitude": 53.3589378,
+                "longitude": -6.330710473854637,
+                "data_file": "data/Met eireann/hourly-dublin-pheonixpark/hly175.csv"
+            },
+            {
+                "name": "Shannon",
+                "location": "Shannon Airport",
+                "type": "onshore",
+                "latitude": 52.6986845,
+                "longitude": -8.921554762550244,
+                "data_file": "data/Met eireann/hourly-clare-shannonairport/hly3904.csv"
+            },
+            {
+                "name": "Cork",
+                "location": "Cork Airport",
+                "type": "onshore",
+                "latitude": 51.84173815,
+                "longitude": -8.493798524458427,
+                "data_file": "data/Met eireann/hourly-cork-corkairport/hly3904.csv"
+            },
+            {
+                "name": "Galway",
+                "location": "Mace Head",
+                "type": "onshore",
+                "latitude": 53.3252684,
+                "longitude": -9.9067479,
+                "data_file": "data/Met eireann/houryl-galway-macehead/hly1575.csv"
+            }
+        ],
+        "coastal": [
+            {
+                "name": "Valentia",
+                "location": "Valentia Observatory",
+                "type": "coastal",
+                "latitude": 51.940110450000006,
+                "longitude": -10.244100575764996,
+                "data_file": "data/Met eireann/hourly-kerry-valentia/hly1387.csv"
+            },
+            {
+                "name": "Malin Head",
+                "location": "Malin Head Weather Station",
+                "type": "coastal",
+                "latitude": 55.3747865,
+                "longitude": -7.3998451,
+                "data_file": "data/Met eireann/hourly-donegal-malinhead/hly1175.csv"
+            },
+            {
+                "name": "Sherkin Island",
+                "location": "Sherkin Island Weather Station",
+                "type": "coastal",
+                "latitude": 51.4715854,
+                "longitude": -9.41753349584879,
+                "data_file": "data/Met eireann/hourly-cork-sherkin/hly6040.csv"
+            }
+        ],
+        "offshore": [
+            {
+                "name": "M2",
+                "location": "M2 Buoy",
+                "type": "offshore",
+                "latitude": 53.4800,
+                "longitude": -5.4250,
+                "data_file": "data/Bouy data/m2.pdf"
+            },
+            {
+                "name": "M3",
+                "location": "M3 Buoy",
+                "type": "offshore",
+                "latitude": 51.2166,
+                "longitude": -10.5500,
+                "data_file": "data/Bouy data/m3 buoy data.pdf"
+            },
+            {
+                "name": "M4",
+                "location": "M4 Buoy",
+                "type": "offshore",
+                "latitude": 55.0000,
+                "longitude": -10.0000,
+                "data_file": "data/Bouy data/m4.pdf"
+            },
+            {
+                "name": "M5",
+                "location": "M5 Buoy",
+                "type": "offshore",
+                "latitude": 51.6900,
+                "longitude": -6.7040,
+                "data_file": "data/Bouy data/m5.pdf"
+            },
+            {
+                "name": "M6",
+                "location": "M6 Buoy",
+                "type": "offshore",
+                "latitude": 53.0605,
+                "longitude": -15.9300,
+                "data_file": "data/Bouy data/m6.pdf"
+            }
+        ]
     },
-    {
-        "name": "Shannon",
-        "station_location": "Shannon Airport",
-        "latitude": 52.6986845,
-        "longitude": -8.921554762550244
-    },
-    {
-        "name": "Cork",
-        "station_location": "Cork Airport",
-        "latitude": 51.84173815,
-        "longitude": -8.493798524458427
-    },
-    {
-        "name": "Galway",
-        "station_location": "Mace Head",
-        "latitude": 53.3252684,
-        "longitude": -9.9067479
-    },
-    {
-        "name": "Valentia",
-        "station_location": "Valentia Observatory",
-        "latitude": 51.940110450000006,
-        "longitude": -10.244100575764996
-    },
-    {
-        "name": "Malin Head",
-        "station_location": "Malin Head Weather Station",
-        "latitude": 55.3747865,
-        "longitude": -7.3998451
-    },
-    {
-        "name": "Sherkin Island",
-        "station_location": "Sherkin Island Weather Station",
-        "latitude": 51.4715854,
-        "longitude": -9.41753349584879
+    "analysis_parameters": {
+        "extreme_thresholds": {
+            "offshore_fixed_ms": 15.0,
+            "offshore_high_ms": 20.0,
+            "percentile_threshold": 95
+        },
+        "time_window": {
+            "start": "2024-01-01",
+            "end": "2026-01-11"
+        },
+        "forecast_lead_times": [24, 48, 72, 96, 120, 144],
+        "grid_resolution": 0.25
     }
 }

@@ -2,3 +2,4 @@
 *.grib2
 *.idx
 *.nc
+.env

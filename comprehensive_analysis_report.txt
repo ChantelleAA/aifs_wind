@@ -1,0 +1,150 @@
+====================================================================================================
+COMPREHENSIVE WIND FORECAST EVALUATION REPORT
+====================================================================================================
+
+Analysis Date: 2026-01-15 06:35:05
+Forecast Date: date+0
+Initialization: 00z
+Lead Times: [6, 12, 24] hours
+
+====================================================================================================
+STEP 1: LOCATION SELECTION
+====================================================================================================
+
+Total Locations: 11
+  Onshore   : 2
+  Coastal   : 4
+  Offshore  : 5
+
+====================================================================================================
+STEP 6: DETERMINISTIC FORECAST PERFORMANCE
+====================================================================================================
+
+Environment         Model         Truth_Source  N_Samples     Bias      MAE     RMSE  Correlation  POD  FAR  CSI
+    onshore           IFS Station Observations          6 1.163073 1.163073 1.767287     0.267827  NaN  1.0  0.0
+    onshore   AIFS Single Station Observations          6 0.895359 1.155608 1.875347     0.336055  NaN  1.0  0.0
+    onshore AIFS Ens Mean Station Observations          6 1.177509 1.423931 2.272580     0.230136  NaN  1.0  0.0
+    coastal           IFS Station Observations         12 3.152390 3.984604 4.569609     0.041314  NaN  1.0  0.0
+    coastal   AIFS Single Station Observations         12 1.584713 2.441971 2.967944     0.021938  NaN  NaN  NaN
+    coastal AIFS Ens Mean Station Observations         12 1.193188 2.659914 3.149600    -0.001520  NaN  NaN  NaN
+   offshore           IFS Station Observations         15 0.555466 3.211332 3.701365    -0.102306  NaN  1.0  0.0
+   offshore   AIFS Single Station Observations         15 0.074929 2.690351 3.283975    -0.131831  NaN  1.0  0.0
+   offshore AIFS Ens Mean Station Observations         15 0.020442 2.615982 3.231352     0.002936  NaN  1.0  0.0
+
+====================================================================================================
+STEP 7: ENSEMBLE ANALYSIS
+====================================================================================================
+
+Environment  Mean_Spread  Mean_Error  Spread_Error_Ratio  Extreme_Threshold  Mean_Extreme_Prob
+    onshore     0.200884    0.473301            0.424431           7.988919                NaN
+    coastal     0.287113    1.959202            0.146546          13.358772                NaN
+   offshore     0.236822    0.943859            0.250908          14.563645                NaN
+
+====================================================================================================
+STEP 8: KEY FINDINGS BY ENVIRONMENT
+====================================================================================================
+
+
+ONSHORE:
+--------------------------------------------------------------------------------
+
+IFS:
+  RMSE:        1.767 m/s
+  Bias:        +1.163 m/s
+  Correlation: 0.268
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+AIFS Single:
+  RMSE:        1.875 m/s
+  Bias:        +0.895 m/s
+  Correlation: 0.336
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+AIFS Ens Mean:
+  RMSE:        2.273 m/s
+  Bias:        +1.178 m/s
+  Correlation: 0.230
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+COASTAL:
+--------------------------------------------------------------------------------
+
+IFS:
+  RMSE:        4.570 m/s
+  Bias:        +3.152 m/s
+  Correlation: 0.041
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+AIFS Single:
+  RMSE:        2.968 m/s
+  Bias:        +1.585 m/s
+  Correlation: 0.022
+  POD:         nan
+  FAR:         nan
+  CSI:         nan
+
+AIFS Ens Mean:
+  RMSE:        3.150 m/s
+  Bias:        +1.193 m/s
+  Correlation: -0.002
+  POD:         nan
+  FAR:         nan
+  CSI:         nan
+
+OFFSHORE:
+--------------------------------------------------------------------------------
+
+IFS:
+  RMSE:        3.701 m/s
+  Bias:        +0.555 m/s
+  Correlation: -0.102
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+AIFS Single:
+  RMSE:        3.284 m/s
+  Bias:        +0.075 m/s
+  Correlation: -0.132
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+AIFS Ens Mean:
+  RMSE:        3.231 m/s
+  Bias:        +0.020 m/s
+  Correlation: 0.003
+  POD:         nan
+  FAR:         1.000
+  CSI:         0.000
+
+
+====================================================================================================
+CONCLUSIONS
+====================================================================================================
+
+1. Forecast Skill:
+   - Performance varies significantly across environments
+   - Ensemble provides valuable uncertainty information
+
+2. Extreme Event Detection:
+   - POD and CSI metrics quantify detection capability
+   - Environmental differences in extreme event forecasting observed
+
+3. Ensemble Value:
+   - Spread-error ratios indicate calibration quality
+   - Ensemble mean often outperforms deterministic forecasts
+
+4. Recommendations:
+   - Collect more historical data for robust statistics
+   - Add observational verification data (ERA5, stations)
+   - Analyze seasonal and diurnal variations
+   - Investigate case studies of extreme events

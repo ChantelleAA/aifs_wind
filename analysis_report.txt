@@ -1,0 +1,64 @@
+================================================================================
+WIND FORECAST ANALYSIS REPORT
+================================================================================
+
+Analysis Date: date+0
+Initialization Time: 00z
+Lead Times Analyzed: [6, 12, 24] hours
+
+Locations Analyzed: 12
+  Onshore:  3
+  Coastal:  4
+  Offshore: 5
+
+================================================================================
+SUMMARY STATISTICS BY ENVIRONMENT
+================================================================================
+
+Environment       Model  Lead Time (h)  Mean WS (m/s)  Std Dev      Min       Max  N
+    Onshore         IFS              6       4.609508 1.392080 3.012372  5.565408  3
+    Onshore         IFS             12       7.087521 1.943509 5.284725  9.146361  3
+    Onshore         IFS             24       5.982104 0.757113 5.346391  6.819693  3
+    Onshore AIFS Single              6       4.616208 0.633351 3.961028  5.225201  3
+    Onshore AIFS Single             12       7.645915 1.548332 6.470789  9.400373  3
+    Onshore AIFS Single             24       5.136853 0.378446 4.716627  5.450788  3
+    Coastal         IFS              6       9.082315 3.233733 5.542955 13.387017  4
+    Coastal         IFS             12      11.924377 3.357468 8.505784 16.504900  4
+    Coastal         IFS             24       8.737953 3.315156 5.195899 13.104568  4
+    Coastal AIFS Single              6       7.649234 2.157262 5.640753 10.634142  4
+    Coastal AIFS Single             12      10.159524 2.345637 7.410154 13.092113  4
+    Coastal AIFS Single             24       7.232857 2.192016 5.403750 10.417998  4
+   Offshore         IFS              6       8.367027 5.209813 3.369736 14.957062  5
+   Offshore         IFS             12      10.628779 2.646199 7.043435 14.066760  5
+   Offshore         IFS             24       9.635508 3.091107 4.284537 12.087906  5
+   Offshore AIFS Single              6       8.229910 4.656880 3.231302 14.134298  5
+   Offshore AIFS Single             12      10.922431 2.983952 6.313813 14.530926  5
+   Offshore AIFS Single             24       9.102296 3.016108 3.991249 11.970226  5
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+Lead Time 6h:
+  Mean difference (AIFS - IFS): -0.533 m/s
+  IFS mean:  7.666 m/s
+  AIFS mean: 7.133 m/s
+
+Lead Time 12h:
+  Mean difference (AIFS - IFS): -0.326 m/s
+  IFS mean:  10.175 m/s
+  AIFS mean: 9.849 m/s
+
+Lead Time 24h:
+  Mean difference (AIFS - IFS): -0.935 m/s
+  IFS mean:  8.423 m/s
+  AIFS mean: 7.488 m/s
+
+================================================================================
+NOTES
+================================================================================
+
+• Analysis based on past 3 days of open data
+• For robust conclusions, more historical data is needed
+• Verification against observations not yet performed
+• Ensemble analysis pending availability of full ensemble data
