@@ -4,7 +4,7 @@ A comprehensive evaluation of ECMWF's AI Forecasting System (AIFS) for wind spee
 
 ## 📊 Project Overview
 
-This project evaluates how AI-based weather forecasts (AIFS) compare to traditional physics-based models (IFS) for wind speed prediction across different Irish environments (onshore, coastal, and offshore).
+This project evaluates how AI-based weather forecasts (AIFS) compare to traditional physics-based models (IFS) for wind speed prediction across 11 different Irish environments (onshore, coastal, and offshore).
 
 ### Key Findings
 
