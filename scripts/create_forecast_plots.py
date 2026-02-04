@@ -1,9 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
+from pathlib import Path
+
+# Add src to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 # Try to read from multiple possible locations
 possible_paths = [
+    Path(__file__).parent.parent / 'reports' / 'wind_speed_timeseries.csv',
+    Path(__file__).parent.parent / 'wind_speed_timeseries.csv',
     'wind_speed_timeseries.csv',
     '../wind_speed_timeseries.csv',
     '../../wind_speed_timeseries.csv'

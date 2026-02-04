@@ -9,7 +9,7 @@ This script examines all available forecast data downloaded with the new structu
     └── aifs-ens/enfo/date-N/HHz/type-cf|pf/step-NNNh.grib2
 
 Usage:
-    python inspect_data_updated.py
+    python inspect_data.py
 """
 
 import pandas as pd
@@ -18,6 +18,9 @@ import xarray as xr
 from pathlib import Path
 import sys
 from datetime import datetime
+
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 print("=" * 80)
 print("WIND FORECAST DATA INSPECTION (Updated Structure)")
@@ -31,7 +34,7 @@ print("\n" + "=" * 80)
 print("1. ECMWF FORECAST DATA")
 print("=" * 80)
 
-FORECAST_BASE = Path("ecmwf_forecasts")
+FORECAST_BASE = Path(__file__).parent.parent / "data" / "ecmwf_forecasts"
 
 models = {
     'IFS': FORECAST_BASE / "ifs" / "oper",

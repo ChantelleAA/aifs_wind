@@ -17,6 +17,10 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Iterable
+import sys
+
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from ecmwf.opendata import Client
 
@@ -64,7 +68,10 @@ def iter_dates(days_back: int) -> Iterable[int]:
         yield -d
 
 
-def main(out_dir: str = "ecmwf_forecasts"):
+def main(out_dir: str | None = None):
+    if out_dir is None:
+        out_dir = str(Path(__file__).parent.parent / 'data' / 'ecmwf_forecasts')
+    
     base = Path(out_dir)
 
     for job in JOBS:

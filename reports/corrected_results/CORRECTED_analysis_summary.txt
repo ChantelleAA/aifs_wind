@@ -1,0 +1,49 @@
+====================================================================================================
+CORRECTED WIND FORECAST ANALYSIS SUMMARY
+====================================================================================================
+
+CRITICAL FIXES APPLIED:
+----------------------------------------------------------------------------------------------------
+
+1. TIME INTERPRETATION FIX
+   Problem: Forecasts plotted against lead time, causing constant values
+   Fix: Calculate valid_time = init_time + lead_time
+   Result: Proper temporal variation now visible
+
+2. ENSEMBLE AVAILABILITY FIX
+   Problem: Assumed 51 members at all lead times
+   Fix: Ensemble analysis restricted to 6h only
+   Result: Ensemble members by lead time:
+     6h: 51 members
+     12h: 1 members
+     24h: 1 members
+
+3. GRID POINT DISTANCE FIX
+   Problem: Assumed forecasts at exact station coordinates
+   Fix: Calculate distance to nearest 0.25° grid point
+   Result: Representativeness error quantified
+     Shannon_Airport          :  7.37 km
+     Cork_Airport             : 10.17 km
+     Malin_Head               : 14.44 km
+     Valentia                 :  6.84 km
+     Mace_Head                : 10.63 km
+
+====================================================================================================
+FILES GENERATED:
+====================================================================================================
+
+1. wind_speed_timeseries_CORRECTED.csv
+2. timeseries_CORRECTED_*.png (time series by location)
+3. forecast_degradation_CORRECTED.png (RMSE vs lead time)
+4. ensemble_members_6h_CORRECTED.png (ensemble spread)
+5. grid_point_distances_CORRECTED.png (representativeness map)
+6. This report
+
+====================================================================================================
+KEY FINDINGS:
+====================================================================================================
+
+- Forecast skill degrades with lead time (as expected)
+- Full ensemble (51 members) only at 6h
+- Grid representativeness error: 5-15 km typical
+- Temporal alignment now correct

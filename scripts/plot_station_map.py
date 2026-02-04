@@ -7,7 +7,12 @@ import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 from matplotlib.patches import Rectangle
+from pathlib import Path
 import numpy as np
+import sys
+
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 # Station coordinates
 locations = {
@@ -210,12 +215,13 @@ ax.text(
 plt.tight_layout()
 
 # Save figure
-output_path = 'irish_stations_map.png'
+output_path = Path(__file__).parent.parent / 'outputs' / 'visualizations' / 'irish_stations_map.png'
+output_path.parent.mkdir(parents=True, exist_ok=True)
 plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
 print(f"\n✓ Map saved to: {output_path}")
 
 # Also save a high-resolution version
-output_path_hires = 'irish_stations_map_hires.png'
+output_path_hires = Path(__file__).parent.parent / 'outputs' / 'visualizations' / 'irish_stations_map_hires.png'
 plt.savefig(output_path_hires, dpi=600, bbox_inches='tight', facecolor='white')
 print(f"✓ High-res map saved to: {output_path_hires}")
 

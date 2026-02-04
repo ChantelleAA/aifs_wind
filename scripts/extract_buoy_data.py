@@ -12,6 +12,10 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import re
+import sys
+
+# Add src to path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 BUOYS = {
     'M2_Buoy': 'm2.pdf',
@@ -96,7 +100,7 @@ def main():
     print("MARINE BUOY DATA EXTRACTION - FIXED VERSION")
     print("="*80)
     
-    output_dir = Path('data/Bouy data')
+    output_dir = Path(__file__).parent.parent / 'data' / 'Bouy data'
     
     for buoy_name, pdf_file in BUOYS.items():
         pdf_path = output_dir / pdf_file

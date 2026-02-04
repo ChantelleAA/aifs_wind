@@ -34,7 +34,10 @@ from ecmwf.opendata import Client
 # ----------------------------
 def load_project_config():
     try:
-        import config as cfg  # type: ignore
+        import sys
+        from pathlib import Path
+        sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+        from aifs_wind import config as cfg  # type: ignore
         init_times = getattr(cfg, "INIT_TIMES", ["00z", "06z", "12z", "18z"])
         lead_times = getattr(cfg, "LEAD_TIMES", [6, 12, 24])
         return init_times, lead_times
@@ -45,7 +48,7 @@ def load_project_config():
 INIT_TIMES, LEAD_TIMES = load_project_config()
 
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "3"))
-OUT_DIR = Path(os.environ.get("OUT_DIR", "ecmwf_forecasts"))
+OUT_DIR = Path(os.environ.get("OUT_DIR", str(Path(__file__).parent.parent / 'data' / 'ecmwf_forecasts')))
 SOURCE = os.environ.get("SOURCE", "ecmwf")
 
 MODEL = "aifs-ens"
