@@ -87,40 +87,49 @@ for station in stations:
         lat, lon, grid_lats, grid_lons
     )
     
+    # Plot nearest grid point (highlighted)
+    ax.scatter(nearest_lon, nearest_lat, c='darkred', s=80, marker='s', 
+               edgecolors='black', linewidth=1.5,
+               transform=ccrs.PlateCarree(), zorder=2)
+    
+    # Plot connection line (thicker and more visible)
+    ax.plot([lon, nearest_lon], [lat, nearest_lat], 
+            color='red', linestyle='--', linewidth=2.5, alpha=0.8,
+            transform=ccrs.PlateCarree(), zorder=2)
+    
     # Plot station
     ax.scatter(lon, lat, c=colors[stype], s=100, marker='o', 
                edgecolors='black', linewidth=1.5,
                transform=ccrs.PlateCarree(), zorder=3)
     
-    # Plot connection line
-    ax.plot([lon, nearest_lon], [lat, nearest_lat], 
-            'k--', linewidth=1, alpha=0.6,
-            transform=ccrs.PlateCarree(), zorder=2)
-    
     # Add station label
     ax.text(lon, lat + 0.15, name, fontsize=9, ha='center', 
+            fontweight='bold',
             transform=ccrs.PlateCarree(), zorder=4,
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
     
     # Add distance label at midpoint
     mid_lat = (lat + nearest_lat) / 2
     mid_lon = (lon + nearest_lon) / 2
-    ax.text(mid_lon, mid_lat, f'{distance:.1f} km', fontsize=7, 
-            ha='center', style='italic', color='red',
-            transform=ccrs.PlateCarree(), zorder=4)
+    ax.text(mid_lon, mid_lat, f'{distance:.1f} km', fontsize=8, 
+            ha='center', style='italic', color='darkred', fontweight='bold',
+            transform=ccrs.PlateCarree(), zorder=4,
+            bbox=dict(boxstyle='round,pad=0.2', facecolor='yellow', alpha=0.7))
 
 # Create legend
 from matplotlib.lines import Line2D
 legend_elements = [
-    Line2D([0], [0], marker='o', color='w', label='Grid points (0.25°)',
-           markerfacecolor='red', markersize=8, alpha=0.5),
+    Line2D([0], [0], marker='o', color='w', label='All grid points (0.25°)',
+           markerfacecolor='red', markersize=6, alpha=0.5),
+    Line2D([0], [0], marker='s', color='w', label='Nearest grid point to station',
+           markerfacecolor='darkred', markersize=8, markeredgecolor='black'),
     Line2D([0], [0], marker='o', color='w', label='Onshore stations',
            markerfacecolor='green', markersize=10, markeredgecolor='black'),
     Line2D([0], [0], marker='o', color='w', label='Coastal stations',
            markerfacecolor='orange', markersize=10, markeredgecolor='black'),
     Line2D([0], [0], marker='o', color='w', label='Offshore buoys',
            markerfacecolor='blue', markersize=10, markeredgecolor='black'),
-    Line2D([0], [0], color='black', linestyle='--', label='Distance to nearest grid point')
+    Line2D([0], [0], color='red', linestyle='--', linewidth=2, label='Distance to nearest grid point')
 ]
 ax.legend(handles=legend_elements, loc='upper left', fontsize=9)
 

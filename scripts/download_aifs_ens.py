@@ -44,7 +44,7 @@ def load_project_config():
     except Exception:
         return ["00z", "06z", "12z", "18z"], [6, 12, 24]
 
-
+ 
 INIT_TIMES, LEAD_TIMES = load_project_config()
 
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "3"))

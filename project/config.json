@@ -1,43 +1,12 @@
 {
     "SOURCE": "ecmwf",
-    "DAYS_BACK": 3,
+    "DAYS_BACK": 7,
     "INIT_TIMES": ["00z", "12z"],
     "OUT_DIR": "/home/chantelle/Desktop/PhD Project/code/aifs_wind/project/data/ecmwf_forecasts",
     "BASE_URL": "https://data.ecmwf.int",
     "RESOLUTION": "0p25",
 
     "MODELS": {
-
-        "ifs": {
-            "products": [
-                {
-                    "stream": "oper",
-                    "type": "fc",
-                    "surface_params": [
-                        "10u", "10v", "100u", "100v",
-                        "10fg", "2t", "msl"
-                    ]
-                },
-                {
-                    "stream": "enfo",
-                    "type": "cf",
-                    "surface_params": [
-                        "10u", "10v", "100u", "100v",
-                        "10fg", "2t", "msl"
-                    ]
-                },
-                {
-                    "stream": "enfo",
-                    "type": "pf",
-                    "surface_params": [
-                        "10u", "10v", "100u", "100v",
-                        "10fg", "2t", "msl"
-                    ]
-                }
-            ],
-            "pressure_level_params": ["u", "v", "t", "gh"],
-            "pressure_levels": [850, 500]
-        },
 
         "aifs-single": {
             "products": [
@@ -50,8 +19,8 @@
                     ]
                 }
             ],
-            "pressure_level_params": ["u", "v", "t", "z"],
-            "pressure_levels": [850, 500]
+            "pressure_level_params": [],
+            "pressure_levels": []
         },
 
         "aifs-ens": {
@@ -73,8 +42,8 @@
                     ]
                 }
             ],
-            "pressure_level_params": ["u", "v", "t", "z"],
-            "pressure_levels": [850, 500]
+            "pressure_level_params": [],
+            "pressure_levels": []
         }
     }
 }

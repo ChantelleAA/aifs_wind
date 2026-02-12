@@ -15,7 +15,8 @@ init_times = config.get("INIT_TIMES", ["00z", "12z"])
 out_dir = Path(config.get("OUT_DIR"))
 base_url = config.get("BASE_URL", "https://data.ecmwf.int")
 
-LEAD_TIMES = list(range(0, 144, 3)) + list(range(144, 241, 6))
+LEAD_TIMES = [0, 6, 12, 24, 48, 72, 96, 120, 144]
+# LEAD_TIMES = list(range(0, 144, 3)) + list(range(144, 241, 6))
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -74,7 +75,7 @@ def main():
     
     client = Client(source=source, model="aifs-ens")
     
-    for days_ago in range(days_back):
+    for days_ago in range(days_back-1, -1, -1):
         date_str = yyyymmdd_utc(days_ago)
         
         try:
